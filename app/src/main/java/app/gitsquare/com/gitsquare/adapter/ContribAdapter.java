@@ -68,7 +68,8 @@ public class ContribAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
         }
 
         ((VHItems) holder).txtloginName.setText(model.getLogin());
-        ((VHItems) holder).txtContribution.setText("Contribution"+" : "+model.getContribution());
+
+        ((VHItems) holder).txtContribution.setText("Contribution : "+model.getContribution());
 
         ((VHItems) holder).itemView.setOnClickListener(new View.OnClickListener() {
             @Override

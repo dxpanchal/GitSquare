@@ -8,6 +8,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.View;
+import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
@@ -39,6 +40,8 @@ public class SquareContribs extends AppCompatActivity {
     private SwipeRefreshLayout swipeRefreshLayout;
 
     private RecyclerView recyclerViewContributers;
+
+    private LinearLayout layoutNoDataFound;
 
     private ArrayList<Model_Contrib> arrayList = new ArrayList<>();
 
@@ -112,6 +115,8 @@ public class SquareContribs extends AppCompatActivity {
 
         txtFilter = (TextView) findViewById(R.id.textViewFilterContribution);
 
+        layoutNoDataFound = (LinearLayout) findViewById(R.id.layoutNoDataFound);
+
         recyclerViewContributers = (RecyclerView) findViewById(R.id.recycleviewContributers);
 
         LinearLayoutManager layoutManager = new LinearLayoutManager(activity, LinearLayoutManager.VERTICAL, false);
@@ -129,6 +134,7 @@ public class SquareContribs extends AppCompatActivity {
     }
 
 
+    // GET DATA FROM API
     private void getAllSquareContribs() {
 
         if (AppUtil.isNetworkAvailable(activity)) {
@@ -216,13 +222,18 @@ public class SquareContribs extends AppCompatActivity {
         }
     }
 
-
+    // NOTIFY RECYCLEVIEW
     private void setAdapter() {
 
         if (arrayList.size() > 0) {
             adapter.notifyDataSetChanged();
+            layoutNoDataFound.setVisibility(View.GONE);
+            recyclerViewContributers.setVisibility(View.VISIBLE);
         } else {
             // NO DATA FOUND
+
+            layoutNoDataFound.setVisibility(View.VISIBLE);
+            recyclerViewContributers.setVisibility(View.GONE);
         }
     }
 }

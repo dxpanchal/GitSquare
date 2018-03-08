@@ -58,12 +58,7 @@ public class ContribAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
         if (str_img_path != null && !str_img_path.equals("")) {
             Glide.with(activity)
                     .load(str_img_path)
-                    .placeholder(R.drawable.ic_avatar_small)
-                    .dontAnimate()
-                    .diskCacheStrategy(DiskCacheStrategy.ALL)
                     .into(((VHItems) holder).imgPic);
-        } else {
-            Glide.clear(((VHItems) holder).imgPic);
 
         }
 

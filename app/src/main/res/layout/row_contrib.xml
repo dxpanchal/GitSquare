@@ -19,16 +19,29 @@
             android:orientation="horizontal"
 
             >
-            <com.mikhaellopez.circularimageview.CircularImageView
-                android:id="@+id/imageview_profile_pic"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:src="@drawable/ic_avatar_small"
-                app:civ_border_color="#EEEEEE"
-                app:civ_border_width="4dp"
-                app:civ_shadow="true"
-                app:civ_shadow_radius="10"
-                app:civ_shadow_color="#787878"/>
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <com.mikhaellopez.circularimageview.CircularImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/ic_avatar_small"
+                    app:civ_border_color="#EEEEEE"
+                    app:civ_border_width="4dp"
+                    app:civ_shadow="true"
+                    app:civ_shadow_radius="10"
+                    app:civ_shadow_color="#e7e7e7"/>
+                <com.mikhaellopez.circularimageview.CircularImageView
+                    android:id="@+id/imageview_profile_pic"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    app:civ_border_color="#EEEEEE"
+                    app:civ_border_width="4dp"
+                    app:civ_shadow="true"
+                    app:civ_shadow_radius="10"
+                    app:civ_shadow_color="#787878"/>
+            </FrameLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

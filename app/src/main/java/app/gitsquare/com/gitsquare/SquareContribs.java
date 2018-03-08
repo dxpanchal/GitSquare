@@ -55,6 +55,8 @@ public class SquareContribs extends AppCompatActivity {
 
     private TextView txtFilter;
 
+    LinearLayoutManager layoutManager;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -95,6 +97,8 @@ public class SquareContribs extends AppCompatActivity {
                         }
                     });
 
+
+
                     setAdapter();
                 }else
                 {
@@ -119,7 +123,7 @@ public class SquareContribs extends AppCompatActivity {
 
         recyclerViewContributers = (RecyclerView) findViewById(R.id.recycleviewContributers);
 
-        LinearLayoutManager layoutManager = new LinearLayoutManager(activity, LinearLayoutManager.VERTICAL, false);
+         layoutManager = new LinearLayoutManager(activity, LinearLayoutManager.VERTICAL, false);
 
         recyclerViewContributers.setLayoutManager(layoutManager);
 
@@ -219,6 +223,9 @@ public class SquareContribs extends AppCompatActivity {
         } else {
             //NO INTERNET CONNECTION
             showToast(activity, activity.getResources().getString(R.string.no_internet_connection_message));
+            if (isSwapToRefreshOn) {
+                swipeRefreshLayout.setRefreshing(false);
+            }
         }
     }
 
@@ -229,11 +236,14 @@ public class SquareContribs extends AppCompatActivity {
             adapter.notifyDataSetChanged();
             layoutNoDataFound.setVisibility(View.GONE);
             recyclerViewContributers.setVisibility(View.VISIBLE);
+            layoutManager.scrollToPositionWithOffset(0, 20);
         } else {
             // NO DATA FOUND
 
             layoutNoDataFound.setVisibility(View.VISIBLE);
             recyclerViewContributers.setVisibility(View.GONE);
         }
+
+
     }
 }

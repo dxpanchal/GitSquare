@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="twodp">2dp</dimen>
+    <dimen name="bordermargin">5dp</dimen>
+    <dimen name="fivedp">5dp</dimen>
+    <dimen name="tendp">10dp</dimen>
+</resources>

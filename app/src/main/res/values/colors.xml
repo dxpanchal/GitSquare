@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#00BCD4</color>
+    <color name="colorPrimaryDark">#00BCD4</color>
+    <color name="colorAccent">#0097A7</color>
+
+    <color name="progressbarcolor">#0097A7</color>
+    <color name="toasttextcolor">#0097A7</color>
+    <color name="lightgray">#d1d1d1</color>
+    <color name="gray">#484848</color>
+    <color name="white">#ffffff</color>
+</resources>

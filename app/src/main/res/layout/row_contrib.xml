@@ -1,0 +1,85 @@
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/tendp"
+    app:cardCornerRadius="0dp"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="@dimen/tendp"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+
+            >
+            <com.mikhaellopez.circularimageview.CircularImageView
+                android:id="@+id/imageview_profile_pic"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@drawable/ic_avatar_small"
+                app:civ_border_color="#EEEEEE"
+                app:civ_border_width="4dp"
+                app:civ_shadow="true"
+                app:civ_shadow_radius="10"
+                app:civ_shadow_color="#787878"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+                <app.gitsquare.com.gitsquare.customview.MediumTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="20dp"
+                    android:gravity="left"
+                    android:singleLine="true"
+                    android:maxLines="1"
+                    android:textAllCaps="true"
+                    android:layout_margin="@dimen/fivedp"
+                    android:id="@+id/textview_loing_name"
+                      />
+                <app.gitsquare.com.gitsquare.customview.RegularTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp"
+                    android:textColor="@color/gray"
+                    android:textSize="12dp"
+                    android:gravity="left"
+                    android:singleLine="true"
+                    android:maxLines="1"
+                    android:text="@string/contributed_response"
+                    android:layout_margin="@dimen/fivedp"
+                    android:id="@+id/textviewContributionLink"
+                    android:layout_gravity="left"
+                    />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_margin="@dimen/tendp"
+            android:background="@color/lightgray"/>
+        <app.gitsquare.com.gitsquare.customview.RegularTextView
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:textColor="@color/gray"
+            android:textSize="12dp"
+            android:gravity="center"
+            android:singleLine="true"
+            android:maxLines="1"
+            android:id="@+id/textviewContribution"
+            android:layout_gravity="right"
+            />
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>

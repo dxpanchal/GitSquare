@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/twodp"
+    >
+    <app.gitsquare.com.gitsquare.customview.MediumTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/toasttextcolor"
+        android:padding="@dimen/bordermargin"
+        android:textSize="15dp"
+        android:id="@+id/textviewToastMessage"
+        android:background="@drawable/rectangal_rounded_gray_dark_border"
+        />
+
+</android.support.v7.widget.CardView>
